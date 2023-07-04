@@ -1,0 +1,131 @@
+
+GIT & GITHUB
+
+
+--------------------------WorkingDirectory---------------------
+
+
+rama MAIN ó MASTER
+	(trabajas paralelamente en una copia local y no en el servidor)
+
+(TODO COMIENZA PONIENDO "git")
+
+sudo apt-get intall git
+	(instalat git)
+
+git --version
+	(saber que version de git esta intalada)
+
+git init
+	(comienza el repositorio en directorio en el que estamos)
+
+git status
+	(informacion del repositorio)
+
+git config --global user.name "kevlaroscuro"
+	(le decimos a git nuestro nombre, para el registro de usuario a
+	ojos de cambios y modificaciones en el trabajo de repositorios)
+
+git config --global user.email "kevlaroscuro@gmail.com"
+	(lo mismo, pero ponemos nuestro email)
+
+git config --list
+	(muestra la configuradion de Git)
+
+
+------------------------StagingArea---------------------------
+
+
+git add 
+	(hacer seguimiento de un archivo)
+
+git commit
+	(confirma los cambios y los sube al servidor)
+
+git commit -m ""
+	(confirmar cambios con la anotacion ya incluida)
+
+git commit --amend
+	(se abre un editor nano para cambiar el mensaje
+	de confirmacion	del commit)
+
+git restore --stage ""
+	(saca un archivo del seguimiento)
+
+git reset --hard HEAD^
+	(borrado forzoso del ultimo commit, la ultima confirmacion)
+
+git reset --hard HEAD~3
+	(borrado forzoso de commit tercero)
+
+git log
+	(muestra el historial)
+
+git pull
+	(descargas los cambios de GitHub 
+	a tu repositorio local, Y SE SOBREESCRIBE!)
+
+git push
+	(sube los cambios del local a la nube en GitHub)
+
+git push -f origin main
+	(sube los cambios de forma forzada a la rama main)
+	
+git remote add origin "URL.git"
+	(vinculamos el repositorio local en la nube)	
+
+git push --set-upstream origin master
+	(para configurar la rama master en main y el remoto como upstream
+	y tenerlo ya configurado automaticamente)
+
+git remote -v
+	(para saber si tenemos un repositorio vinculado en la nube)
+
+git remote set-url "nombre del repo local" "URL.git"
+	(para cambiar el repo si nos hemos equivocado)
+
+git clone "URL"
+	(clona el repositorio con la URL en nuestro
+	directorio local)
+
+(OJO! No es lo mismo "clonar" que "forkear". Para forkear lo haces
+en GitHub del destino a tu cuenta y luego ya clonas desde tu cuenta
+a local. Se usa para clonar repositorios publicos sin tener
+permisos)
+
+git remote add upstream "URL"
+	(despues de forkear, vincula el repositorio original con
+	el tuyo de GitHub)
+
+git fetch upstream
+	(similar al pull, ya que se descargan los cambios del 
+	repositorio original al tuyo de GitHub)
+
+
+---------------------------------------------------
+
+
+git branch
+	(muestra las ramas del repositorio)
+
+git branch ""
+	(crea una nueva rama)
+
+git branch -d ""
+	(borra una rama)
+
+git checkout ""
+	(cambia de rama)
+
+git checkout -b ""
+	(crea una nueva rama y te translada a ella)
+
+git merge upstream/main
+	(fusiona dos ramas)
+
+git diff origin main
+	(compara los ficheros entre ramas)
+	
+git gc --aggressive --prune=all
+	(?¿)
+

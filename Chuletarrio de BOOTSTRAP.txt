@@ -1,0 +1,136 @@
+
+BOOTSTRAP
+
+video 31
+03:14:00
+(todo descargado)
+
+------------------------------------------
+
+(despues de container va el tamaño tras un guion, que viene en Bootstrap)
+    container --> contenedor generico
+    container-sm --> contenedor con breakpoint pequeño
+    container-md --> contenedor con breakpoint medio
+    container-lg --> contenedor con breakpoint grande
+    container-xl --> contenedor con breakpoint extra grande
+    container-fluid --> contendor simpre con 100% de ancho
+    
+(con un guion detras de los margin o el background le damos el valor o color, que vienen en Bootstrap)
+    bg --> background-colors
+    ml --> margin left
+    mr --> margin right
+    mt --> margin top
+    mb --> margin bottom
+    mx --> margenes para el eje x (left/right)
+    my --> margenes para el eje y (top/bottom)
+
+(so ponen un borde al contenedor)
+    border
+
+(columnas, poniendo despues el numero de columnas,
+y teniendo en cuenta que siempre se juega con columnas de 12)
+    col
+
+(con row-cols se hace lo mismo, brealpoint para responsive, pero a nivel 
+del padre)
+    row-cols
+
+!important
+
+
+
+------------------------------------------
+
+LO PRIMERO, MUY IMPORTANTE! Bootstrap esta pensado en Mobile-first.
+
+Es una libreria o framework (herramienta de trabajo) de codigo abierto, que nos da muchas 
+cosas echas de cosas de HTML, CSS y de JavaScript.
+
+Nosotros aprenderemos con la version 4.6, pero a partir de la 5.0 es diferente un poco, 
+ya que no depende de otra libreria llamada JQuery.
+
+Tambien instalaremos las dependencias (son otras librerias de 3ºs que necesita 
+Bootstrap para funcionar): JQuery y Popper
+
+Es importante respetar el orden de los script o links en el HTML.
+
+SCRIPT = PROGRAMITA
+
+Bootstrap y Sass van coguidas de la mano en muchos aspectos.
+
+------NODE.JS y SASS------
+
+Node.js es un ecosistema de JS que pertmite ejecutarlo en el lado del servidor (backend). Y .npm,
+es un gestor de paquetes de Node (como apt por ejemplo).
+
+Y Sass es una libreria o framework que dota a CSS de un monton de funciones que por si CSS no tiene.
+
+Descargamos Node.js (version LTS) para instalar Sass:
+
+Instalamos dependencias:
+    sudo apt install software-properties-common apt-transport-https ca-certificates gnupg2 curl build-essential
+
+Insertamos el paquete de Node en apt:
+    curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+
+Instalamos Node(e indirectamente npm):
+    sudo apt-get install -y nodejs
+
+Comprobamos las versiones para ver si esta todo bien:
+    node --version
+    npm --version
+
+Instalamos Sass:
+    npm install -g sass
+
+Nos bajamos de la web oficial los archivos de Bootstrap no compilados y lo descomprimimos en una carpeta scss
+en nuestra raiz del proyecto. Luego ponemos en la terminal lo siguiente (siempre sentro de la carpeta).
+Esto permite compilar el archivo scss que estamos modificando al archivo css, que es lo que entiende el navegador:
+    sass --watch scss:css
+
+Nota: automaticamente Sass nos genera un archivo style.css.map que no pasa nada por tenerlo, se puede borrar, pero
+se genera de nuevo si metemos el comando en terminal. Si no lo queremos ponemos en lugar de lo anterior:
+    sass --watch --no-source-map scss:css    
+
+Para customizar Bootstrap nos vasamos en la siguiente guia:
+    https://getbootstrap.com/docs/4.6/getting-started/theming/
+
+Y entre otros muchos vamos a poder modificar los archivos, asi que ponemos lo siguiente en nuestro scss:
+    @import "../bootstrap-4.6.2/scss/functions"
+    @import "../bootstrap-4.6.2/scss/variables"
+    @import "../bootstrap-4.6.2/scss/bootstrap.scss"
+
+NOTA IMPORTANTE: HAY UNA EXTENSION DE VSC QUE SE LLAMA LIVE SASS COMPILER, Y TOCANDO DOS O TRES COSAS EN SU CONFIGURACION
+TE HACE LO MISMO QUE TODO LO ANTERIOR (CAMBIANDO EL QUE CARPETAS TE DE CSS TE COMPILA).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.....................................................................................................................
+cd /etc/apt/sources.list.d 
+sudo rm nodesource.list
+
+sudo apt --fix-broken install
+sudo apt update
+sudo apt remove nodejs
+sudo apt remove nodejs-doc
+
+sudo apt autoremove
+
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+node --version
+npm --version
+.....................................................................................................................

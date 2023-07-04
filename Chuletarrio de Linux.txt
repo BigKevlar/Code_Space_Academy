@@ -1,0 +1,151 @@
+
+COMANDOS DE LINUX
+
+--------------------------------------------
+
+-a
+(permite ver ficheros y directorios ocultos)
+
+.
+(delante de un fichero y directorio, lo oculta)
+
+ctrl izq. + alt izq. + T
+(abre terminal)
+
+/media
+(es la carpeta compartida)
+
+/var/www
+(directorio para proyectos web)
+
+---------------------------------------------
+
+clear (limpia la terminal)
+
+exit (sale de la sesion o retrocede)
+
+history (lista de comandos usados por el usuario en uso)
+
+history -c (borra el historial de comandos)
+
+history | less (lo mismo, pero paginado)
+
+comando + -help (nos muestra para que sirve el comandos)
+
+man + comandos (lo mismo, pero mas bonito)
+
+cal (calendario)
+
+cal 2022 (calendario 2022)
+
+cal -3 (muestras mes anterior, actual y siguiente)
+
+date (muestra la fecha muy detallada)
+
+date -d "Dec 25 1991" (lo mismo, pero de la fecha señalada)
+
+date -d "Dec 25 1991" +%d/%m/%Y (muestra solo la fecha)
+
+------------------------------------------------
+
+whoiam 
+(saber que usuario somos)
+
+chown -R 
+(cambia propietario y grupo de ficheros y directorios)
+
+sudo su 
+(acceder como administrador)
+
+sudo 
+(seguido de comando, ejecuta comandos como admin)
+
+pwd 
+(saber donde estamos)
+
+cd 
+(moverse a traves de directorios)
+
+mkdir 
+(crea un directorio)
+
+touch 
+(chear un fichero)
+
+mv 
+(mueve o renombra directorios, si ponemos * movemos todo lo similar)
+
+cp 
+(copia ficheros y directorios y los renombra)
+
+rm 
+(borra ficheros)
+
+rm -r 
+(borra directorios recursivamente)
+
+rm -rf 
+(borra todo forzado recursivamente)
+
+ls 
+(muestra los directorios y ficheros)
+
+ls -l 
+(lo mismo pero detallado)
+
+echo juancarlos 
+(muestra lo escrito)
+
+echo "Juan Carlos" > minombre.txt
+(manda lo escirto a un fichero de texto nuevo)
+
+echo "Martos Vergara" >> minombre.txt
+(añade extra lo escirto a un fichero de texto existente)
+
+cat minombre.txt 
+(muestra lo que hay en el fichero)
+
+nano 
+(editor de texto en consola)
+
+ctrl izq. + shift izq. + T 
+(abre nuevas pestañas en consola)
+
+ctrl. + alt + f1
+(entramos en interfaz modo texto)
+
+ctrl. + alt + f7 
+(salimos de interfaz modo texto)
+
+xdpyinfo | grep 'dimensions:'
+(para comprobar la resolucion de pantalla)
+
+--------------------------------------------------
+
+sudo apt update 
+(busca actualizaciones del sistema)
+
+sudo apt upgrade 
+(intala actualizaciones del sistema)
+
+apt install tree 
+(instala la funcion tree)
+
+tree 
+(muestra el contenido en forma de arbol)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

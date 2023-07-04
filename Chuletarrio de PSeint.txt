@@ -1,0 +1,211 @@
+
+PSEINT
+
+------------------------------------------
+
+Tipos de operaciones
+
+	- Numericas
+	- Alfanumericas
+	- Logicas
+
+Orden de ejecucion por jerarquia
+
+	1º parentesis - ( )
+	2º potencias - **
+	3º *, /, mod, div
+	4º +, - 
+	5º ==, < >, <, >, <=, >=
+	6º No
+	7º Y
+	8º O
+
+Operaciones Logicas (Verdadero ó Falso)
+
+	No ó ! --> pone lo contrario a lo que escribimos.
+	Y ó & --> TRUE si todos los datos son verdaderos, si no FALSE.
+	O ó | --> TRUE si existe al menos un verdadero, si no FALSE.
+	== --> TRUE si son iguales, si no FALSE.
+	< > --> 
+
+------------------------------------------
+
+Definir ... Como Logico, Caracter, Entero o Real
+
+Escribir ...
+
+Leer ...
+
+Si ... Entonces ... FinSi
+
+Si ... O ... Entonces ... FinSi
+
+Si ... O ... Entonces ... SiNo ... FinSi
+
+Si ... Y ... Entonces ... SiNo ... FinSi
+
+Si ... I
+	
+------------------------------------------
+	
+Segun ... Hacer
+...
+De Otro Modo
+...
+FinSegun
+
+// Se le llama "switch", o boton, y se usa como "sustituto" 
+// en ocasiones del Si. Ejemplo:
+
+		Leer mes;
+
+		Segun mes Hacer
+
+			1:
+				Escribir "Enero" Sin Saltar;
+			2:
+				Escribir "Febrero" Sin Saltar;
+			3:
+				Escribir "Marzo" Sin Saltar;
+			4:
+				Escribir "Abril" Sin Saltar;
+			5:
+				Escribir "Mayo" Sin Saltar;
+			6:
+				Escribir "Junio" Sin Saltar;
+			7:
+				Escribir "Julio" Sin Saltar;
+			8:
+				Escribir "Agosto" Sin Saltar;
+			9:
+				Escribir "Septiembre" Sin Saltar;
+			10:
+				Escribir "Octubre" Sin Saltar;
+			11:
+				Escribir "Noviembre" Sin Saltar;
+			12:
+				Escribir "Diciembre" Sin Saltar;
+		De otro Modo
+			Escribir 'Mes incorrecto, repita operacion';
+			Leer mes;
+		FinSegun
+
+------------------------------------------
+
+Mientras ... Hacer
+... 
+FinMientras
+
+// Se usa para crear una condicion que NO sabemos cuando acaba, 
+// y no pasa a la siguiente orden hasta que se cumpla; se usa mucho 
+// en acumulaciones, y la condicion se verifica al principio. Ejemplos:
+	
+		Leer num_a;	
+
+		Mientras num_a != 0 Hacer
+			Escribir 'El numero no es valido, intentelo de nuevo:';
+			Leer num_a;
+		FinMientras
+
+// ò
+
+		suma = 0;
+		contador = 0;
+
+		Mientras contador <= 20 Hacer
+			Escribir contador;
+			suma = suma + contador;
+			contador = contador + 1;
+		FinMientras
+
+		Escribir 'La suma es: ', suma;
+
+// Ojo con la variable suma, que debe "actualizarse" antes que contador.
+
+------------------------------------------
+
+Repetir
+... 
+Hasta que ...
+	
+// Se usa para repetir una accion que NO sabemos cuando acaba y 
+// sale del bucle cuando consigue lo deseado. La condicion se
+// verifica al final. Ejemplo:
+
+		Repetir
+			Leer litros;
+			Si litros <= 0 Entonces
+				Escribir 'Error en repostaje, vuelva a intentarlo';
+			FinSi
+		Hasta Que litros > 0
+
+------------------------------------------
+
+Para ... 
+
+// Se usa como sustituto del "Mientras" y de "Repetir", ya que
+// asignamos nuermos o lo que sea a culumnas y filas, y
+// lo usamos mucho como contadores y relojes. Ejemplo:
+
+		Escribir 'Autodestruccion en: ' Sin Saltar;
+		Leer boom;
+		
+			Para contador = boom Hasta 0 Con Paso -1 Hacer
+				Escribir contador;
+				Esperar 1 Segundo;
+			Fin Para
+		
+		Limpiar Pantalla;
+		Escribir 'BOOM!';
+
+// ò
+
+		Escribir 'Autodestruccion en: ' Sin Saltar;
+		Leer boom;
+		
+			Para boom = boom Hasta 0 Hacer
+				Limpiar Pantalla;
+				Escribir boom;
+				Esperar 1 Segundo;
+				Limpiar Pantalla;
+			Fin Para
+		
+		Limpiar Pantalla;
+		Escribir 'BOOM!';
+		
+		
+------------------------------------------
+
+Subcadena(..., x, y)
+
+// Es como un array de caracteres, te muestra los valores que 
+// hay entre x e y de la palabra o palabras ... .
+
+------------------------------------------
+
+Longitud(...)
+
+// Muestra cuantos caracteres tiene una palabra o frase ... .
+
+------------------------------------------ 
+
+... Sin Saltar
+
+// No salta de linea en la ejecucion del programa.
+
+------------------------------------------
+
+Esperar ... segundo
+	
+// Espera los segundos que quieras para la siguiente instruccion.
+
+------------------------------------------
+
+Aleatorio (..., ...)
+
+// Da un numero aleatorio entre las dos variables numericas.
+
+------------------------------------------
+
+Mayusculas
+Minusculas

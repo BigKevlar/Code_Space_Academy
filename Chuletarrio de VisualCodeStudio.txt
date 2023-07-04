@@ -1,0 +1,32 @@
+
+VISUAL CODE STUDIO
+
+-----------------------------------------------------------
+
+
+((descargamos el programa del navegador y lo instalamos))
+
+((EMMET, te autocompleta muchas funciones automaticamente))
+
+((GIT GRAPH))
+
+((html5, ))
+
+code .
+(entramos en el programa)
+
+CTRL. + G
+(en VisualCode, navegamos por las lineas del fichero)
+
+CTRL. + S
+(guardamos lo realizado)
+
+code ~/.bashrc
+(fichero de "atajos de teclado")
+
+# Personalized alias
+alias goCode="cd /var/www/Code"
+alias openCode="cd /var/www/Code && code ." 
+
+source ~/.bashrc
+(actualiza lo puesto en el fichero para el sistema)

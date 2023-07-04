@@ -1,0 +1,159 @@
+
+HTML5
+
+------------------------------------------
+
+https://developer.mozilla.org/es/
+
+https://www.w3schools.com/
+	(ojo, que no esta muy actualizada)
+
+https://jsonplaceholder.typicode.com/
+	(para practicar http)
+
+Metodos del protocolo HTML:
+	- GET (solicita info al servidor)
+	- POST (envia info nueva al servidor)
+	- PUT (envia y actualiza info ya existente al servidor)
+	- PATCH (lo mismo que put, pero mas light, parcial)
+	- DELETE (borra info del server).
+	
+Si en VSC pones un ! al pricipio de un doc en blanco lo rellenas con el principio
+de su codigo fuente.	
+
+- Elementos INLINE: 
+- Elementos BLOCK: 
+- Etiquetas semanticas: (muy importante para el seo)
+
+- ATAJOS DE TECLADO SUPER IMPORTANTE!!!!! (MIRAR LAS "SUMAS" DE FUNCIONES)
+	
+CTRL + D en VSC y podremos seleccionar varias lineas al mismo tiempo.
+
+CTRL + U en FireFox te muestra en codigo fuente de la web actual.
+
+CTRL + SHIFT + C en Firefox te habre el modo inspector.
+
+CTRL + MAYUS + 7 para comentar lineas.
+
+CTRL + MAYUS + A para comentar bloques.
+
+SHIFT + ALT + flechas para seleccion y escribir en varias lineas.
+
+Si selecionamos un parrafo o lo que queramos modificar y presionamos F1 (salen todos los comandos de VSC), y ponemos >wrap
+te espera para que pongas una abreviatura, y asi cambiamos secciones enteras a lo que queramos.
+
+NOTA IMPORTANTE: la diferencia entre un "id" y un "class" es que el primero se pueden aplicar cambios individuales y el
+segundo para cambios masivos grupales.
+
+USAR MUCHO LOS ATAJOS DE TECLADO Y EL WRAP!!!
+
+Va a ser muy importante el orden y la sintaxis para que el DOM no falle.
+
+Muy importante tambien los metadatos!!!
+
+passwords filetype:txt
+
+- ¿Como evitar la indexacion de informacion en Google de nuestras webs? con:
+
+	<meta name="robots" content="noindex">
+
+------------------------------------------
+
+<br>
+
+-	Linea en blanco.
+
+<hr>
+
+	- Linea separadora.
+
+<a href="">"" </a>
+
+	- Son para introducir enlaces externos (en las primeras "" ponemos
+	la url, y en las segundas "" ponemos la definicion que aparece). Recordemos
+	 que si le añadimos target="_blanck" te lo abre en una nueva pestaña. Ejemplo:
+	
+	<a href="https://www.google.es/" target="_black">"Enlace a Google"</a>	
+	
+<p>""</p>
+
+	- Es un simple parrafo.
+	
+<p style=22text-align: center">""</p>
+<div class="" align="center"></div>
+
+	- Alinea el parrafo en el centro.
+
+<pre>""</pre>
+
+	- Es un parrafo tambien, pero te respeta es como lo pongas, no te lo "corrigue".
+
+<!--""-->
+
+	- Se usa para comentar lineas o bloques (y los desactiva momentaneamente).
+
+------------------------------------------
+
+target="_black"
+
+	- Si lo pones despues de la URL te abre el enlace en una nueva pestaña.
+
+<b>""</b>
+
+	- En negrita.
+
+<strong>""</strong>
+
+	- Tambien negrita, pero para algunos navegadores le da mas importancia que <b>.
+
+<em>""</em>
+
+	- Cursivas.
+
+<s>""</s>
+
+	- Tachado.
+
+<span id="">""</span>
+<span class="">""</span>
+
+	- Sirve para aislar una parte de texto para darle formato mas tarde en funcion
+	de su id (unica) o class (grupito).
+
+""<sub>""</sub>
+
+	- Sirve para poner subindices (generalmente se usa para matematicas). Ejemplo:
+	
+	<p>
+	La molecula preferida de casi cualquier desarrollador es
+	C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, 
+	tambien conocida como cafeina.
+	</p>
+
+<var>""</var><sup>""</sup>
+
+	- El "var" es para definir una variable, y "sup" es para poner superindices 
+	(de nuevo, esto se usa generalmente para matematicas). Ejemplo:
+	
+	<p>El teorema de pitagoras se representa con la formula:</p>
+	<p><var>a</var><sup>2</sup> + <p><var>b</var><sup>2</sup> = <p><var>c</var><sup>2</sup></p>
+	
+<time datetime="">""</time>
+
+	- Para poner la hora y/o la fecha, pero ademas te la mete en un atributo para darle forma mas tarde. Ejemplo:
+	
+	<p>El bootcamp empieza a las <time datetime="09:30">09:30</time></p>
+	<p>Y el dia es el <time datetime="2022-09-16">2022-09-16</time>
+
+
+<nav>""</nav>
+
+	- Contenedores, pero enfocado a enlaces. Ejemplo:
+		
+	<nav>
+		<a href="https://campus.codespaceacademy.com/">CodeSpaceAcademy</a>
+		<a href="https://github.com/">GitHub</a>
+		<a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics">Aprende HTML5 con Mozilla</a>
+	</nav>
+
+

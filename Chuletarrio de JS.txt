@@ -1,0 +1,96 @@
+
+BOOTSTRAP
+
+video 36
+00:00:00
+(empezamos de nuevo el 02(03/2023 con el video 35, tras "42")
+
+------------------------------------------
+
+Funciones de primera clase (propio de JS) son las que se pueden guardar en variables, para ahorrar codigo entre otras cosas.
+
+Prototipos = propiedasdes de un objeto.
+
+Las comillas simples y dobles hacen exactramente la misma funcion, pero las invertidas (`) sirven para meter variables dentro de una funcion,
+y no tener que ir cerrando comillas como haciamos en PSeint. Por ejemplo:
+
+    // MODO NUEVO
+
+    let coche = {
+        color: rojo;
+    }
+
+    `Mi coche es de color ${coche.color}`
+
+ESTA PEGANDO FUERTE: 
+
+JS es un leguaje no tapiado, es muy flexible e intuitivo, y quizas demasiado. Para eso esta TypeScript, que convierte en tipado a JavaScript,
+para quitarle flexibilidad a JS, a cambio de ser mas rigido para evitar errores futuros.
+
+Es "scope" de una variable es donde nace y muere dicha variable.
+
+¿¿¿ Variables VS Contantes ???
+
+    Variable: puede modificarse luego, sobreescribirse.
+    Contante: no modificable, da error.
+
+Buena practica: usart siempre const salvo que queramos modificarla posteriormente.
+
+Es muy util para saber que tipo de lo que sea que ponemos detras si no lo sabemos. Ejemplo:
+
+    let str = 'Hello World';
+    console.log(typeof str);
+
+        // output: string
+
+OJITO! No se puede inicializar una variable dos veces, si cambiar de valor pero no inicializar.
+
+METHODS = FUNCIONES (color amarillo, y siempre deben ir abiertas y cerradas con parentesis)
+PROPERTY = PROPIEDADES (color azul)
+. = sirve para acceder a un metodo o propiedad de un objeto.
+
+STRINGS = " "
+ARRAYS = [ ]
+OBJECTS = { }
+FUNCTION = ( )
+
+Es importantisimo eliminar los console.log() cuando presentamos un proyecto.
+
+=== es la "igualdad estricta", es decir, que tiene que conincidir en valor y tipo para que de true (siempre un booleano).
+== significa "igualdad" (se suele usar siempre el de arriba, no este).
+!== es la "desigualdad estricta" (mismo comportamiento que el primero pero a la inversa).
+!= es la "desigualdad" (tampoco se usa mucho, solo la de arriba).
+&& significa "y logico", y para devolver true todos deben ser true true, ya que si hay un false ya devolveria false (orden de jerarquia de izq. a dcha.).
+|| es el "o logico", y al contrario que arriba, con que haya un true sinempre dara true (orden de jerarquia de izq. a dcha.).
+
+
+------------------------------------------JAVASCRIPT------------------------------------------
+
+Crear un mensaje y mostrarlo por consola de JS:
+
+    console.log('Hello world');
+
+
+Crear un popup con lo que queramos, cuando se ejecuta el evento click:
+
+    onclick="alert('Hello World')";
+
+Limpiar la consola:
+
+    console.clear
+
+Se usa para saber que tipo de variable se pone:
+
+    console.log(typeof "la variable que queremos comprobar")
+
+Crear bucles:
+
+    for (let i = 1 ; i < 21 ; i++) {
+        console.log(i);
+    }
+
+
+
+
+
+

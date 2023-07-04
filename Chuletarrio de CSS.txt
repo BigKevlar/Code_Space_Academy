@@ -1,0 +1,194 @@
+
+CSS3
+
+------------------------------------------
+
+Navegadores entienden solo = HTML + CSS + JavaScript
+
+Lenguajes de programacion = Sass, 
+
+Formas de aplicar CSS a un documento HTML:
+
+    - Inline (en linea): se aplica en la misma linea que queremos modificar (no es habitual usarlo,
+    solo para pruebas y emergencias, pero hay que correguilo por otro y quitarlo 
+    para una buena practica).
+
+    - Embedded (incrustados) o internos: lo mismo que los inline, pero estos se escriben en
+    el <head> haciendo referencia en el comienzo a los elementos que queremos dar estilo
+    (esto solo afecta como el inline al documento que estemos tocando, pero tampoco lo 
+    usaremos generalmente porque lo suyo es el siguiente, que es el mas versatil).
+
+    - External (externos): son los usados por norma genreal, en el que tenemos un documento CSS
+    a parte en el cual ponemos todos nuestros estilos y luego desde nuestros HTML hacemos
+    llamada a ese documento CSS para que cambien todo del tiron.
+
+OJO! Orden de prioridad de estilos de menor a mayor:
+
+    Reglas del navegador < usuarios < CSS del diseñador/desarrollador
+
+Tipos de selectores:
+
+    - Selector universal: *
+        (lo coge todo)
+
+    - Selector de etiqueta: <nav>, <div>, <name>, etc.
+    
+    - Selector de clase: .classname
+        (ojo con este, es el mas usado, se pueden añadir una a varios estilos a uno mismo)
+    
+    - Selector de ID: #idname
+
+    - Selector por atributo: [attr=value]
+        (se usara en casos muy especificos, porque es el mas minuciosos en las selecciones)
+
+    Los selectores se combinan con un espacio (jerarquia) o por el simbolo > (elemento hijo).
+
+OJO! Cuidado con el orden en el que ponemos los selectores. Ejemplo:
+
+"div img", puede haber cosas por en medio entre div e imagen, es mas generico.
+"div > img", debe haber una imagen justo debajo del div, solo coge hijos inmediatos.
+"div.img", significa que coge un div de la clase img.
+
+Tambien se pueden combinar atributos separandolos con una coma. Por ejemplo:
+
+p {
+    color: red;
+}
+a {
+    color: red;
+}
+
+Es igual que si dejesemos:
+
+p, a {
+    color: red;
+}
+
+Cuando ponemos un fondo en un atributo con background-color hay dos opciones:
+o que la imagen sea muy pequeña y css te la repite automaticamente para llenarlo todo
+(se controla con background-repeat), o bien se escoge una con buena resolucion y que
+pese lo menos posible y la ajustamos automaticamente con background-size: cover, pero
+le estamos obligando a redimensionarla (jugar con contain tambien, auto es por defecto).
+
+Si la imagen es pequeña se pone:
+    background-repeat: no repeat;
+    background-size: cover;
+
+Por lo visto es bastante habitual eliminar los margenes de la web para poder
+personalizarla a gusto, con:
+
+* {
+    margin: 0;
+}
+
+MARGEN > BORDER > PADDING > CONTENT
+
+display: none;
+
+Para un buen posicionamiento en SEO en los motores de
+busqueda de Google es muy importante que la gente tenga
+muchas referencias a tus paginas, asi entiende
+que eres importante.
+
+Para las barras de navegacion, margenes, bordes, paddings, 
+se suele usar la medida de tamaño px, para que no crezca
+en alto (modificamos height).
+
+Cuando queramos modificar tamaño con algo relativo al padre entonces usaremos el %,
+por ejemplo en un contenedor.
+
+Para seleccionar por ejemplo que en CSS es una clase que empieza por algo (p.e.: box)
+se pone con un sombrerito al final de class:
+
+[class^⁼"box"] {
+
+}
+
+En CSS, un "display" es literalmente la caja donde se genera un contenido,
+y mediante las opciones none, inline, block e inline-blockpodemos cambiar sus
+propiedades predeterminandas.
+
+Siempre intentaremos modificar los bloques padres y no los hijos, para que estos
+ultimos se adapten y los hijos no modifiquen margenes y demas, asi los padres
+son quienes modifican los "aires".
+
+Es preferible tener mas selectores que duplicar codigo en varios sitios.
+Por ejemplo, es preferible tener 3 selectores, 1 comun y 2 ya mas especificos.
+
+SELECTORES vs PSEUDO-CLASES (existe en tu HTML) vs PSEUDO-ELEMENTOS (no existe en tu HTML): 
+
+    son otra forma de sellecionar elecmentos de nuestro codigo HTML en CSS, el cual
+    se programa con (:), mirar ejercicio 2 de CSS.
+
+IMPORTANTE:   
+
+    ":first-child" ò ":last-child", selecciona el primer o ultimo hijo para darle propiedades en CSS.
+    "a:visited", cambia el enlace a color a morado cuando se visita.
+    "input:hover", remarca el puntero cuando pasa por encima.
+    "input:focus", cambia cuando estamos interactuando con el. Por ejemplo, escribiendo.
+    "::first-letter", te personaliza la primera letra de lo que elijas.
+    "::first-line", lo mismo que el anterior, pero la primera linea.
+    "::before", es un poco chapuza.
+    "::after", es un poco chapuza.
+
+OJO, SE PUEDEN COMBINAR!
+
+NOTA: se puede poner dos imagenes en "hover", una sin fondo y otra rellenada el fondo, la misma.
+
+"min-width" sirve para ajustar un minimo de ancho para un elemento, para evitar superposicion.
+
+ACORDARSE DE LA PROPIEDAD "OVERFLOW: HIDDEN;", MUY UTIL!!!
+
+------MEDIAS QUERRY------
+
+Si hacemos nuestra web pensando primero en movil, en las media querry debemos poner
+min-width. Si lo hacemos primero en escritorio sera "max-width". CUIDADO: hay que respetar
+el orden, si es pc a movil entonces de menor a mayor, y si es de movil a pc de mayor a menor (ver cheatsheets2).
+
+@media only screen and (min-width: 700px)
+    Significa que no aplicara ninguna regla mientras el ancho no supere 700px. (ejemplo de media-querry de movil a pc).
+
+No vamos a ver nada o casi nada de "transformaciones, transiciones y animaciones", pero echarle un ojo.
+Usar por ejemplo para que no cambie el fondo de golpe, sino lentamente con una transicion de 1 segundo, toques sutiles.
+
+Importar fuentes en CSS (descargarla en formato .tff):
+
+    @font_face {
+        font-family: nombrequeteinventes;
+        src: url(sitiodondelatienesguardada, en formato .tff)
+    }
+
+OJO: Respecto a la pseudo-clase :chast-child, hay que tener en cuenta que en CSS puro genera como un
+"array imaginario" con, por ejemplo si queremos los a:last-child que esten dentro de un nav, todos los a y selecciona el ultimo.
+Lo logico seria elegir el last child del nav, que sera en Java, pero en CSS hay que aprender eso asi, porque si.
+
+------FLEXBOX (se usa para cajas pequeñas y sencillas)------
+
+- Main axis (eje horizontal) justify-content --> 
+- Cross axis (eje perpendicular) align-items --> 
+
+NOTA: un truquillo muy bueno. Con este pseudo-elemento podemos escoger cualquier hijo puesto entre los parentesis.
+Y si en vez de numero ponemos "odd" coge los impares, y con "even" los pares.
+
+
+    .flex_parent > div:nth-child(2)
+
+row-gap
+column-gap
+gap
+
+Contenedor flex VS Elemento flex (ver apuntes video 26)
+
+------CSS GRID------
+
+(ver bien los videos 27 y 28, los he hecho rapido y no he anotado nada)
+
+Para usar iconos tenemos dos opciones:
+
+    - Nos decargamos la libreria y la vinculamos de manera local.
+    - Usar un CDN, que son librerias para importar iconos en en HTML desde un servidor que vinculamos en nuestro codigo.
+
+www.fontawesome.con
+www.temp-mail.org
+
+
